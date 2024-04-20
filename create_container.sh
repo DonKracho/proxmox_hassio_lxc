@@ -53,7 +53,7 @@ pushd $TEMP_DIR >/dev/null
 # Create LXC
 export CTID=$(pvesh get /cluster/nextid)
 export PCT_OSTYPE=debian
-export PCT_OSVERSION=12
+export PCT_OSVERSION=11
 export PCT_DISK_SIZE=4
 export PCT_OPTIONS="
   -cmode shell
@@ -78,7 +78,7 @@ wget -qO - ${REPO}/tarball/master | tar -xz --strip-components=1
 # Modify LXC permissions to support Docker
 LXC_CONFIG=/etc/pve/lxc/${CTID}.conf
 cat <<EOF >> $LXC_CONFIG
-lxc.cgroup2.devices.allow: a
+lxc.cgroup.devices.allow: a
 lxc.cap.drop:
 EOF
 
