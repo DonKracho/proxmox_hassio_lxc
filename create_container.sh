@@ -53,7 +53,7 @@ pushd $TEMP_DIR >/dev/null
 # Create LXC
 export CTID=$(pvesh get /cluster/nextid)
 export PCT_OSTYPE=debian
-export PCT_OSVERSION=11
+export PCT_OSVERSION=12
 export PCT_DISK_SIZE=4
 export PCT_OPTIONS="
   -cmode shell
@@ -125,9 +125,9 @@ lxc-cmd sh <(curl -sSL https://get.docker.com) &>/dev/null
 # Configure Docker configuration
 msg "Configuring Docker..."
 DOCKER_CONFIG_PATH='/etc/docker/daemon.json'
-HA_URL_BASE=https://github.com/home-assistant/supervised-installer/raw/master/files
+HA_URL_BASE=https://github.com/home-assistant/supervised-installer/tree/main/homeassistant-supervised
 lxc-cmd mkdir -p $(dirname $DOCKER_CONFIG_PATH)
-lxc-cmd wget -qLO $DOCKER_CONFIG_PATH ${HA_URL_BASE}/docker_daemon.json
+lxc-cmd wget -qLO $DOCKER_CONFIG_PATH ${HA_URL_BASE}/etc/docker/daemon.json
 lxc-cmd systemctl restart docker
 
 # Configure NetworkManager
