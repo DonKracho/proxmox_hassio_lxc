@@ -1,3 +1,7 @@
+# ATTENTION this fork is work in progress
+looks like the supervised-installer has chaged massivly since this script has been created. Fails at the docker configuration. Some pathes do not exist anymore.
+Homeassistant stil claims not to support an lxc install. As much I would like it due to sharing resources but go with the VM installation meanwile.
+
 # Home Assistant in Proxmox LXC container
 
 Many benefits can be gained by using a LXC container compared to a VM. The resources needed to run a LXC container are less than running a VM. Modifing the resouces assigned to the LXC container can be done without having to reboot the container. The serial devices connected to Proxmox can be shared with multiple LXC containers simulatenously.
