@@ -1,5 +1,5 @@
-# ATTENTION this fork is work in progress
-looks like the supervised-installer has chaged massivly since this script has been created. Fails at the docker configuration. Some pathes do not exist anymore.
+# ATTENTION: this fork is work in progress
+It looks like the supervised-installer has chaged massively since this script has been created. It Fails at the docker configuration. Some pathes do not exist anymore.
 Homeassistant stil claims not to support an lxc install. As much I would like it due to sharing resources but go with the VM installation meanwile.
 
 # Home Assistant in Proxmox LXC container
